@@ -8,6 +8,7 @@
           <element id="module-output" name="Jsp" />
         </element>
       </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/webapp" />
     </root>
   </artifact>
 </component>

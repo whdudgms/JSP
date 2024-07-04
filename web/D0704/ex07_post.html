@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>post방식으로 데이터 전달하기 </h2>
+    <form action="ex08inputOK.jsp" method="post">
+        이름 : <input type="text" name="name"><br>
+        주소 : <input type="text" value="서울시 종로구 관철동 1204" name="addr"><br>
+        나이 : <input type="number" name="age"><br>
+        이메일 : <input type="email" name="email"><br>
+        첨부파일 :<input type="file" name="fname"><br>
+        비밀번호 :<input type="password" name="pw"><br>
+        취미 : <input type="checkbox" name="hobby" value="마라톤">마라톤<br>
+        <input type="checkbox" name="hobby" value="수영">수영<br>
+        <input type="checkbox" name="hobby" value="게임">게임<br>
+        <input type="checkbox" name="hobby" value="축구">축구<br>
+        <br>
+        성별:
+        <input type="radio" name="gender" value="남" >남<br>
+        <input type="radio" name="gender" value="여" >여
+        혈액형:
+        <input type="radio" name="bloodType" value="A">A
+        <input type="radio" name="bloodType" value="B">B
+        <input type="radio" name="bloodType" value="O">O
+        <input type="radio" name="bloodType" value="AB">AB
+        <br>
+        직업 : <select name = "job">
+                <option value = "회사원">회사원</option>
+                <option value = "공무원">공무원</option>
+                <option value = "학생">학생</option>
+                <option value = "주부">주부</option>
+                </select>
+        <br>
+        좋아하는 음식<br>
+        <select name = "food">
+            <option value="한식">한식</option>
+            <option value="중식">중식</option>
+            <option value="일식">일식</option>
+            <option value="양식">양식</option>
+        </select>
+        자기소개 : <br>
+        <textarea name="self" id="" cols="60" rows="10"></textarea>
+        <input type="submit" value="확인">
+        <input type="reset"  value="다시확인">
+    </form>
+</body>
+</html>
