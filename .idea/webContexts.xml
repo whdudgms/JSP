@@ -3,7 +3,10 @@
   <component name="WebContextManager">
     <option name="state">
       <map>
+        <entry key="file://$PROJECT_DIR$/web/D0704/ex07_post.html" value="file://$PROJECT_DIR$/web/D0704" />
         <entry key="file://$PROJECT_DIR$/web/D0704/ex08inputOK.jsp" value="file://$PROJECT_DIR$/web/D0704" />
+        <entry key="file://$PROJECT_DIR$/web/D0704/ex08inputOK2.jsp" value="file://$PROJECT_DIR$/web/D0704" />
+        <entry key="file://$PROJECT_DIR$/web/D0704/ex10_span.html.jsp" value="file://$PROJECT_DIR$/web/D0704" />
       </map>
     </option>
   </component>
