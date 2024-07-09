@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pro(){
+            var name = document.getElementById('name').value;
+            var kor = eval(document.getElementById('kor').value);
+            var eng = eval(document.getElementById('eng').value);
+            var math = eval(document.getElementById('math').value);
+
+            var val = document.getElementById('val');
+            val.innerHTML= name +'  총점:'+ (kor+eng+math)+'  평균:'+(kor+eng+math)/3 + '  등급:'+getRank((kor+eng+math))
+        }
+
+        function getRank(num){
+            if(num > 270){
+                return 'A';
+            }else if(num > 250){
+                return 'B';
+            }else if(num > 230){
+                return 'C';
+            }else if(num > 210){
+                return 'D';
+            }else{
+                return 'F';
+            }
+        }
+    </script>
+</head>
+<body>
+    
+         이름 :<input type="text" id="name">
+         국어 :<input type="text" id="kor">
+         영어 :<input type="text" id="eng">
+         수학 :<input type="text" id="math">
+         <button onclick="pro()">평균 총점 계산</button>
+
+         <p id="val"></p>
+    
+</body>
+</html>

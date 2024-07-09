@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pro(){
+        var data = ["김예은","홍석영","유요한","조영흔","이재원"];
+        
+        var li = document.getElementById('list');
+        var str = "<ul>";
+            for(var a= 0; a < data.length; a++){
+            str+="<li>"+data[a]+"</li>";
+        }
+            str+="</ul>";
+        li.innerHTML += str;
+    }
+    </script>
+</head>
+<body>
+    <h2>저기어때</h2>
+    <div id="list"></div>
+    <button onclick="pro()">출력하기</button>
+</body>
+</html>

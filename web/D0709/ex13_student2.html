@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pro(){
+            var kor = eval(document.getElementById('kor').value);
+            var eng = ~~document.getElementById('eng').value;
+            var math = new Number(document.getElementById('math').value);
+
+            var tot = (kor+ eng+math);
+
+            var avg = tot/3;
+            var result = "";
+            if(avg >= 90){
+                result ="A";
+            }else if( avg >= 80){
+                result ="B";
+            }else if( avg >= 70){
+                result ="C";
+            }else if( avg >= 60){
+                result ="D";
+            }else{
+                result ="F";
+            }
+
+            document.getElementById('tot').innerHTML = tot;
+            document.getElementById('avg').innerHTML = avg;
+            document.getElementById('result').innerHTML = result;
+
+        }
+    </script>
+</head>
+<body>
+    국어 : <input type="text" id="kor"><br>
+    영어 : <input type="text" id="eng"><br>
+    수학 : <input type="text" id="math"><br>
+    <button onclick="pro()">확인</button>
+    <hr>
+    총점 : <span id="tot"></span>
+    평균 : <span id="avg"></span><br>
+    결과 : <span id="result"></span><br>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #container{
+            width: 500px;
+            height: 500px;
+            border: 3px solid black;
+            position: relative;
+        }
+
+        .circle{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 50% 50%;
+            position : absolute;
+        }
+
+        #red{
+            background-color: red;
+            left :20px;
+            top : 20px;
+            position : absolute;
+        }
+        #green{
+            background-color: green;
+            top: 20px;
+            right: 20px;
+            position : absolute;
+        }
+        #blue{
+            background-color: blue;
+            bottom: 20px;
+            right: 20px;
+            position : absolute;
+        }
+        #yello{
+            background-color: yellow;
+            bottom: 20px;
+            left: 20px;
+            position : absolute;
+        }
+        .bg{
+            background-image: url("bg.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h2>Hello HTML</h2>
+        <div id="container">
+            <div class="circle" id="red"></div>
+            <div class="circle" id="green"></div>
+            <div class="circle" id="blue"></div>
+            <div class="circle bg" id="yello"></div>
+        </div>
+    <h2>Hello HTML</h2>
+</body>
+</html>

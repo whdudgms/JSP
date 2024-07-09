@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            var n= document.getElementById("n");
+            let a =  eval(n.value) ;
+            n.value= '';
+
+            console.log(a);
+
+            var output= document.getElementById("output");
+
+            if(a % 2 == 0){
+                output.innerHTML = '짝수';
+            }else{
+                output.innerHTML = '홀수 ';
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    
+    <h2>짝후,홀수 판별</h2>
+    <hr>
+    수를 입력하세요 ==>
+    <input type="text" id="n">
+    <button onclick="check()" >확인하기</button>
+    결과 : <span id="output"></span>
+
+</body>
+</html>

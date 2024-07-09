@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a {
+            text-align: center; /* 텍스트 및 inline 요소들 중앙 정렬 */
+        }
+
+        #b {
+            /* 블록 요소를 inline처럼 취급 */
+            display: inline-block;
+            width: 800px; /* 너비를 화면의 80%로 설정 */
+
+            background: black;
+            height: 2000px; /* 높이를 설정하여 div가 보이게 함 */
+        }
+
+    </style>
+</head>
+<body>
+    <div id="a">
+        <div id="b">
+        </div>
+    </div>
+</body>
+</html>
