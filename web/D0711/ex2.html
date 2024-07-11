@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let tr_list = document.querySelectorAll('tr');
+
+            tr_list.forEach(tr =>{
+                tr.setAttribute("check",0);
+                tr.onmouseenter = function(){
+                    if(tr.getAttribute('check') ==1){
+                        return;
+                    }
+                    tr.style.background='blue';
+                }
+                tr.onmouseleave = function(){
+                    if(tr.getAttribute('check') ==1){
+                        return;
+                    }
+                    tr.style.background='white';
+                }
+                tr.onclick = function(){
+                    tr.setAttribute("check",1);
+                    tr.style.background='red';
+                }   
+            })
+        }
+    </script>
+  </head>
+  <body>
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>100</td>
+            <td>70</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>100</td>
+            <td>70</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>100</td>
+            <td>70</td>
+            <td>60</td>
+        </tr>
+    </table>
+</body>
+</html>

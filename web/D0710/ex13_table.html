@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            let  data = [
+            {dno:10,dname:'기획팀',dloc:'종각'},
+            {dno:20,dname:'영업팀',dloc:'종각'},
+            {dno:30,dname:'개발1팀',dloc:'판교'},
+            {dno:40,dname:'개발2팀',dloc:'가산'},
+        ]
+
+        makeTableFromObjectArr = function(arr){
+            var  str = "<table border='1' width ='80%'>"
+            str += "<tr>";
+                for(key  in data){
+                    str += "<td>"+key+"</td>";
+                }
+            str += "</tr>";  
+            str += "<tr>";
+                for(key  in arr){
+                    str += "<td>"+arr.key+"</td>";
+                }
+            str += "</tr>";  
+            str = "</table>";
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

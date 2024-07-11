@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let trs = document.querySelectorAll('tr');
+
+            trs.forEach(tr => {
+                tr.onmouseenter = function() {
+                    tr.style.backgroundColor = 'green';
+                }
+                tr.onmouseleave = function() {
+                    tr.style.backgroundColor = ''; // 원래 색상으로 복귀
+                }
+                tr.onclick = function() {
+                    tr.style.backgroundColor = 'yellow';
+                }
+            });
+        }
+    </script>
+  </head>
+  <body>
+        <table>
+            <tr>
+                <th>이름</th>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>100</td>
+                <td>70</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>100</td>
+                <td>70</td>
+                <td>60</td>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>100</td>
+                <td>70</td>
+                <td>60</td>
+            </tr>
+        </table>
+    </body>
+</html>

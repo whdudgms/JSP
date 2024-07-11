@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            window.onload=function(){
+                let members = document.getElementsByClassName('member');
+
+
+                
+                // in은 key값을 가져옴 근데 length이런 여러 키들을 전부세서 배열에서 문제가 발생 
+ 
+
+                // of는 요소를 가져오고 
+                 for(m of members){
+                     console.log(m);
+                     m.style.background = 'pink';
+                 }
+            }
+    </script>
+</head>
+<body>
+    
+    <h1 class="member">강동균</h1>
+    <h1>홍길동</h1>
+    <h1 class="member">박성빈</h1>
+    <h1 class="member">유현진</h1>
+    <h1>이순신</h1>
+    <h1 class="member">최가은</h1>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NodeList to Array</title>
+</head>
+<body>
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <script>
+        const nodeList = document.querySelectorAll('.item');
+        console.log(nodeList); // [div.item, div.item, div.item]
+        const array = Array.from(nodeList);
+        console.log(array); // [div.item, div.item, div.item]
+        // 배열 메서드 사용 예시
+        array.forEach(item => {
+            console.log(item.textContent);
+        });
+
+
+    </script>
+</body>
+</html>

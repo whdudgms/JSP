@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        background-color: orange;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+    }
+</style>
+<script>
+    window.onload = function() {
+        let divS = document.querySelectorAll('div');
+        Array.from(divS).forEach((div, i) => {
+            div.setAttribute("idx", i);
+        });
+    }
+</script>
+<body>
+    <div></div>    
+    <div></div>        
+    <div></div>    
+</body>
+</html>

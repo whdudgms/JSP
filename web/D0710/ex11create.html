@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let data ={
+            name:'홍길동',
+            age:20,
+            addr:'서울시 종로구 관철동'
+        }
+
+        window.onload=function(){
+            var str = "<table border='1'>";
+                str += "<tr>";
+                for(let key in data){
+                    str += "<th>" +key+"</th>";
+                }    
+                str += "</tr>";
+                str += "<tr>";
+                for(let key in data){
+                    str += "<td>" +data[key]+"</td>";
+                }
+                str += "</tr>";
+            str += "</table>"
+
+            document.getElementById('result').innerHTML = str;
+        }
+    </script>
+</head>
+<body>
+    <h2>회원의 정보</h2>
+    <div id="result"></div>
+    
+</body>
+</html>

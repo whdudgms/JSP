@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        #date {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #calendar {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td {
+            width: 14.28%;
+            height: 50px;
+            border: 1px solid #000;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        td:nth-child(1), td:nth-child(7) {
+            background-color: #ffeb99;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        let year = new Date().getFullYear();
+        let month = new Date().getMonth();
+
+        function printCalendar(year, month) {
+            var cal = document.getElementById('calendar');
+            cal.innerHTML = '';
+            var datee = document.getElementById('date');
+
+            var tab = "";
+            var today = new Date();
+
+            var startDate = new Date(year, month, 1);
+            var endDate = new Date(year, month + 1, 0);
+
+            var day1 = startDate.getDay();
+            var day2 = endDate.getDate();
+
+            tab += "<table>";
+            tab += "<tr>";
+            tab += "<th>일</th>";
+            tab += "<th>월</th>";
+            tab += "<th>화</th>";
+            tab += "<th>수</th>";
+            tab += "<th>목</th>";
+            tab += "<th>금</th>";
+            tab += "<th>토</th>";
+            tab += "</tr>";
+            tab += "<tr>";
+            var str = "";
+            for (var j = 1; j <= day1; j++) {
+                str += "<td>" + "&nbsp;" + "</td>";
+            }
+            for (var i = 1; i <= day2; i++) {
+                str += "<td>" + i + "</td>";
+                if ((i + day1) % 7 == 0) {
+                    str += "</tr><tr>";
+                }
+            }
+            tab += str;
+            tab += "</tr>";
+            tab += "</table>";
+
+            cal.innerHTML += tab;
+
+            var yeare = startDate.getFullYear();
+            var monthe = startDate.getMonth() + 1;
+            datee.innerHTML = '';
+            datee.innerHTML += yeare + '년 ' + monthe + '월';
+        }
+
+        function down() {
+            month--;
+            printCalendar(year, month);
+        }
+
+        function up() {
+            month++;
+            printCalendar(year, month);
+        }
+
+        window.onload = function () {
+            printCalendar(year, month);
+        };
+    </script>
+</head>
+<body>
+    <h2 id="date"></h2>
+    <div id="calendar"></div>
+    <button onclick="printCalendar(year, month)">달력을줘</button>
+    <button onclick="down()">이전 달</button>
+    <button onclick="up()">다음 달</button>
+</body>
+</html>

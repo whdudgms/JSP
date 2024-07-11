@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            let output="";
+            for(let i = 0; i < 256; i++){
+                output += "<div></div>";
+            }
+
+            document.body.innerHTML = output;
+
+            let divs = document.querySelectorAll('div');
+            divs.forEach(a =>{
+                a.style.height = "2px";
+                a.style.marin = "10px";
+                a.style.background="green";
+            })
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

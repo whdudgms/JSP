@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,p,a{
+            margin: 30px;
+            border: solid green 1px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            // 버튼 클릭 시 새로운 요소 추가
+            document.querySelector("#btnAdd").onclick = function(){
+                let data = '<div id="inner"> <p id="p">  <a id="a" href="#">aaaaaaaa</a> </p></div>';
+                document.querySelector("#outer").insertAdjacentHTML('beforeend', data);
+            }
+
+            // 이벤트 위임으로 #outer에 클릭 이벤트 설정
+            document.querySelector("#outer").addEventListener("click", function(event){
+                let target = event.target;
+
+                // 클릭된 요소가 <a> 태그인지 확인
+                if(target.tagName.toLowerCase() === 'a'){
+                    // 부모를 찾아서 <p> 태그를 찾을 때까지 반복
+                    while(target && target.tagName.toLowerCase() !== 'p'){
+                        target = target.parentElement;
+                    }
+                    
+                    if(target && target.tagName.toLowerCase() === 'p'){
+                        console.log('Found <p> tag:', target);
+                        // 여기서 <p> 태그를 대상으로 원하는 작업을 수행
+                        alert('Clicked on <p> containing the <a> tag');
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner">
+            <p id="p">
+                <a id="a" href="#">aaaaaaaa</a>
+            </p>
+        </div>
+        <div id="inner">
+            <p id="p">
+                <a id="a" href="#">aaaaaaaa</a>
+            </p>
+        </div>
+    </div>
+    <hr>
+    <button id="btnAdd">추가</button>
+</body>
+</html>

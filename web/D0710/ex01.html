@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ex01.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        let member = ["김예은","홍석영","유요한","조영흔","이재원"];
+
+        window.onload = function(){
+            let btnList = document.getElementById("btnList");
+            btnList.onclick = function(){
+                var a = pro(member);
+
+                document.getElementById("list").innerHTML = a;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h2>회원목록</h2>
+    <hr>
+    <div id="list"></div>
+    <button id="btnList">회원목록 출력</button>
+</body>
+</html>

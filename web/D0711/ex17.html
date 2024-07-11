@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,p,a{
+            margin: 30px;
+            border: solid green 1px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            document.querySelector('#outer').addEventListener('click',function(){
+                alert('outer');
+            })
+            document.querySelector('#inner').addEventListener('click',function(){
+                alert('inner');
+            })
+            document.querySelector('#p').addEventListener('click',function(){
+                alert('p');
+            })
+            document.querySelector('#a').addEventListener('click',function(){
+                alert('a');
+            })
+        }
+
+    </script>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner">
+            <p id="p">
+                <a id="a" href="#">aaaaaaaa</a>
+            </p>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

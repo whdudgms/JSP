@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            tbody = document.querySelector('tbody');
+            document.querySelector('#btnAdd').onclick = function(){
+
+                let newTr = document.createElement('tr');
+                document.querySelectorAll('input').forEach(element => {
+                    let newTd = document.createElement('td');
+                    newTd.appendChild(document.createTextNode(element.value));
+                    newTr.appendChild(newTd);
+                });
+                tbody.appendChild(newTr);
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    이름 : <input type="text">
+    국어 : <input type="text">
+    영어 : <input type="text">
+    수학  : <input type="text">
+    <button id="btnAdd">추가</button>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>홍길동</td>
+                <td>100</td>
+                <td>70</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>100</td>
+                <td>70</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>100</td>
+                <td>70</td>
+                <td>50</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            let tr_list = document.querySelector('tbody');
+
+            tr_list.onclick = function(event){
+                    console.log(event);
+                    console.log(event.target.parentElement);
+                    event.target.parentElement.style.background = 'red';
+                    //event.target.
+            }
+
+            document.querySelector('#btnAdd').onclick = function(){
+                let tr = document.createElement("tr");
+                let input =  document.querySelectorAll('input');
+                for(i = 0; i < input.length; i++){
+                    let td = document.createElement('td');
+                    td.appendChild(document.createTextNode(  input[i].value));
+                    tr.appendChild(td);
+                }
+                tr_list.appendChild(tr);
+            }
+        }
+    </script>
+</head>
+<body>
+    이름 : <input type="text">
+    국어 : <input type="text">
+    영어 : <input type="text">
+    수학  : <input type="text">
+    <button id="btnAdd">추가</button>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>홍길동</td>
+                <td>100</td>
+                <td>70</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>100</td>
+                <td>70</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>100</td>
+                <td>70</td>
+                <td>50</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
