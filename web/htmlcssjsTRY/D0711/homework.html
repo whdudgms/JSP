@@ -7,11 +7,19 @@
     <script>
         window.onload=function(){
             let tr_list = document.querySelector('tbody');
+            let trs = document.querySelectorAll('tr');
+
 
             tr_list.onclick = function(event){
-                    console.log(event);
-                    console.log(event.target.parentElement);
-                    event.target.parentElement.style.background = 'red';
+                let ch = document.querySelector('tbody').children;
+                for (let i = 0; i < ch.length; i++) {
+                    console.log(ch[i].textContent);
+                    ch[i].style.background='white'
+                }
+
+              
+
+                event.target.parentElement.style.background = 'red';
                     //event.target.
             }
 
