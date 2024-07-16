@@ -1,4 +1,4 @@
-package D0715_mvc.controller;
+package D0716.controller;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

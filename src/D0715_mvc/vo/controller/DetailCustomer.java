@@ -1,6 +1,6 @@
-package D0715_mvc.controller;
+package D0716.controller;
 
-import D0715_mvc.dao.CustomerDAO;
+import D0716.dao.CustomerDAO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
