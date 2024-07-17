@@ -3,15 +3,24 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <context-param>
+        <param-name>org.apache.jasper.compiler.TldLocationsCache.TLD_XML</param-name>
+        <param-value>WEB-INF/tld/web-jsptaglib.tld</param-value>
+    </context-param>
 
-
-    <servlet>
-        <servlet-name>kosta</servlet-name>
-        <servlet-class>D0715_mvc2.KostaController</servlet-class>
-    </servlet>
     <servlet-mapping>
-        <servlet-name>kosta</servlet-name>
-        <url-pattern>*.do</url-pattern>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.html</url-pattern>
     </servlet-mapping>
+
+
+<!--    <servlet>-->
+<!--        <servlet-name>kosta</servlet-name>-->
+<!--        <servlet-class>D0715_mvc2.KostaController</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>kosta</servlet-name>-->
+<!--        <url-pattern>*.do</url-pattern>-->
+<!--    </servlet-mapping>-->
 
 </web-app>

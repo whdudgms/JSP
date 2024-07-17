@@ -1,10 +1,9 @@
 package D0715_mvc2;
 
-import D0715_mvc.dao.CustomerDAO;
+import D0716.dao.CustomerDAO;
 import D0715_mvc.vo.CustomerVO;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -37,7 +36,7 @@ public class KostaController extends HttpServlet {
             ArrayList<CustomerVO> list = dao.findAll();
             request.setAttribute("list", list);
             System.out.println(request.getContextPath());
-            viewPage = request.getContextPath()+"/day0715_mvc2/listCustomer.jsp";
+            viewPage = request.getContextPath()+"/D0715_mvc2/listCustomer.jsp";
 
         } else if (cmd.equals("insertCustomerM2.do")) {
             viewPage = request.getContextPath() + "/day0715_mvc2/insertCustomer.jsp";
@@ -58,7 +57,7 @@ public class KostaController extends HttpServlet {
             } else {
                 request.setAttribute("msg", "고객등록 실패");
             }
-            viewPage = request.getContextPath() + "/day0715_mvc2/insertCustomerOK.jsp";
+            viewPage = request.getContextPath() + "/D0715_mvc2/insertCustomerOK.jsp";
 
         } else if (cmd.equals("detailCustomerM2.do")) {
             int custid = Integer.parseInt(request.getParameter("custid"));
@@ -106,7 +105,7 @@ public class KostaController extends HttpServlet {
         System.out.println("View Page: " + viewPage);
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
         dispatcher.forward(request, response);
-        System.out.println("cmd: " + cmd);
+
     }
 
     @Override

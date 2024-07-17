@@ -1,6 +1,6 @@
 package D0715_mvc3;
 
-import D0715_mvc.dao.CustomerDAO;
+import D0716.dao.CustomerDAO;
 import D0715_mvc.vo.CustomerVO;
 
 import javax.servlet.ServletException;

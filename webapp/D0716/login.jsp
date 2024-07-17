@@ -13,6 +13,13 @@
     <meta charset="UTF-8">
 </head>
 <body>
-
+        <h2>로그인</h2>
+        <hr>
+        <form action="loginOK.do" method="post">
+            아이디 :  <input type="text" name="id"><br>
+            암호 :    <input type="text" name="pwd"><br>
+            <input type="submit" value="로그인">
+            <input type="reset" value="초기화">
+        </form>
 </body>
 </html>

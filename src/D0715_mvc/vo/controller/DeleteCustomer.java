@@ -1,4 +1,4 @@
-package D0716.controller;
+package D0715_mvc.vo.controller;
 
 import D0716.dao.CustomerDAO;
 

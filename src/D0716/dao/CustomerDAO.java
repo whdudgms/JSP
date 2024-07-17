@@ -1,6 +1,6 @@
-package D0715_mvc.dao;
+package D0716.dao;
 
-import D0715_mvc.provider.ConnectionProvider;
+import D0716.provider.ConnectionProvider;
 import D0715_mvc.vo.CustomerVO;
 
 import java.sql.*;

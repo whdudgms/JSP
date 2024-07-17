@@ -10,6 +10,7 @@
       <root url="file://$PROJECT_DIR$/../../../../neddFile" />
       <root url="file://$PROJECT_DIR$/../../../../neddFile" />
       <root url="file://$PROJECT_DIR$/../../../../neddFile" />
+      <root url="jar://$USER_HOME$/Downloads/lib/cos.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
@@ -22,6 +23,8 @@
       <root url="file://$PROJECT_DIR$/../../../../neddFile/apache-tomcat-9.0.90/webapps/docs/appdev/sample/src" />
       <root url="file://$PROJECT_DIR$/../../../../neddFile/apache-tomcat-9.0.90/webapps/examples/WEB-INF/classes" />
     </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../neddFile" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../neddFile" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/../../../../neddFile" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/../../../../neddFile" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/../../../../neddFile" recursive="false" />

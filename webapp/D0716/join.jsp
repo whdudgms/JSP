@@ -13,6 +13,13 @@
     <meta charset="UTF-8">
 </head>
 <body>
+<form action="joinOK.do" method="post">
+    아이디 :  <input type="text" name="id"><br>
+    암호 :    <input type="text" name="pwd"><br>
+    이름 :  <input type="text" name="name"><br>
 
+    <input type="submit" value="회원가입">
+    <input type="reset" value="초기화">
+</form>
 </body>
 </html>
